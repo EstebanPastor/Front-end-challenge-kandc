@@ -11,7 +11,7 @@ export default async function Home() {
             <img
               src={caseStudy.hero_image}
               height={256}
-              className="w-full object-cover"
+              className="w-full object-cover h-[256px]"
               alt="case-study-image"
             />
             <div>

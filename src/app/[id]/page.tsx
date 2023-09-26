@@ -34,8 +34,8 @@ export default async function IdPage({
                 <img
                   key={index}
                   src={element.image_url || caseStudy.title}
-                  height={320}
                   className="w-full object-cover"
+                  height={320}
                   alt="element-image"
                 />
               )
