@@ -1,3 +1,5 @@
+import { notFound } from "next/navigation";
+
 export interface CaseStudy {
   id: number;
   client: string;
@@ -25,12 +27,17 @@ const api = {
       )
         .then((res) => res.json() as Promise<{ case_studies: CaseStudy[] }>)
         .then((data) => data.case_studies),
-    fetch: (id: CaseStudy["id"]): Promise<CaseStudy> =>
-      api.caseStudy
+    fetch: async (id: CaseStudy["id"]): Promise<CaseStudy> => {
+      const caseStudy = await api.caseStudy
         .list()
         .then(
           (caseStudies) => caseStudies.find((caseStudy) => caseStudy.id === id)!
-        ),
+        );
+      if (!caseStudy) {
+       return notFound();
+      }
+      return caseStudy
+    },
   },
 };
 

@@ -7,7 +7,11 @@ export default async function IdPage({
   params: { id: string };
 }) {
   const caseStudy = await api.caseStudy.fetch(Number(id));
+ 
   return (
+
+  
+
     <article className="grid gap-8">
       <Link href="/" className="opacity-80">
         ← Back to list
