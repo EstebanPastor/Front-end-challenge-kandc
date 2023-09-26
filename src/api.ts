@@ -7,7 +7,7 @@ export interface CaseStudy {
   title: string;
   hero_image: string;
   sections: {
-    title?: null | string;
+    title: null | string;
     body_elements: (
       | {
           image_url: string;

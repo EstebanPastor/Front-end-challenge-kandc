@@ -14,7 +14,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="grid grid-rows-[auto,1fr,auto] min-h-screen px-4 container m-auto">
-        <header className="leading-[60px] font-bold ">Kin+Carta</header>
+        <header className="leading-[60px] font-bold ">Kin+Carta challenge</header>
         <main className="py-12">{children}</main>
         <footer className="text-center leading-[60px] opacity-80 ">
           With love ❤ Esteban Pastor
